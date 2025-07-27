@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "author" content = "Yuwen Chen">
+        <title> Bear Ninja Hunter Game</title> 
+    </head>
+    <body>
+        <h1>bear ninja hunter game</h1>
+        <p id = "Message">welcome to bear ninja hunter game</p>
+        <p id = "result"></p>
+    <script>
+        let playername = prompt("welcome to Bear Hunter Ninja!Please enter your name to get started:");
+        alert("Hi," + playername + " Let's Play");
+        let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter?");
+        const computerChoice = "bear";
+        let message = `${playername}, you picked ${playerChoice}! The computer picked Bear!`;
+        document.getElementById("Message").innerHTML = message;
+        console.log(message);
+        let result = "";
+        if(playerChoice == computerChoice){
+            result = "tie";
+        } else if (playerChoice === "Bear" && computerChoice === "Ninja") {
+            result = "win";
+        } else if (playerChoice === "Bear" && computerChoice === "Hunter") {
+            result = "lose";
+        } else if (playerChoice === "Ninja" && computerChoice === "Bear") {
+            result = "lose";
+        } else if (playerChoice === "Ninja" && computerChoice === "Hunter") {
+            result = "win";
+        } else if (playerChoice === "Hunter" && computerChoice === "Bear") {
+            result = "win";
+        } else if (playerChoice === "Hunter" && computerChoice === "Ninja") {
+            result = "lose";
+        } else {
+            result = "Invalid input.";
+        }
+        let outcome = "";
+        switch(result) {
+            case "win":
+                outcome = "You win";
+                break;
+            case "lose":
+                outcome = "You lose";
+                break;
+            case "tie":
+                outcome: "it's a tie";
+                break;
+            default:
+                outcome = "invalid input";
+        }
+        document.getElementById("result").innerHTML = outcome;
+        console.log(outcome);
+        
+    </script>
+    </body>
+</html>
