@@ -13,7 +13,7 @@
         let playername = prompt("welcome to Bear Hunter Ninja!Please enter your name to get started:");
         alert("Hi," + playername + " Let's Play");
         let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter?");
-        const computerChoice = "bear";
+        const computerChoice = "Bear";
         let message = `${playername}, you picked ${playerChoice}! The computer picked Bear!`;
         document.getElementById("Message").innerHTML = message;
         console.log(message);
@@ -32,8 +32,6 @@
             result = "win";
         } else if (playerChoice === "Hunter" && computerChoice === "Ninja") {
             result = "lose";
-        } else {
-            result = "Invalid input.";
         }
         let outcome = "";
         switch(result) {
@@ -46,8 +44,6 @@
             case "tie":
                 outcome: "it's a tie";
                 break;
-            default:
-                outcome = "invalid input";
         }
         document.getElementById("result").innerHTML = outcome;
         console.log(outcome);
